@@ -1,12 +1,15 @@
 #!/bin/sh
 set -e
 
-# Usa a env "sortudo" ou um valor padrão
-: "${sortudo:=Fulano de Tal}"
+: "${SORTUDO:=Fulano}"
+: "${PARTICIPANTES:=Fulano,Beltrano,Ciclano}"
 
-# Gera o config.js com base na variável de ambiente
+# Converte PARTICIPANTES -> array JS
+PARTICIPANTES_JS=$(echo "$PARTICIPANTES" | awk -F',' '{ printf "["; for(i=1;i<=NF;i++){ printf "\""$i"\""; if(i<NF) printf "," } printf "]" }')
+
 cat <<EOF >/usr/share/nginx/html/config.js
-window.SORTUDO = "${sortudo}";
+window.SORTUDO = "${SORTUDO}";
+window.PARTICIPANTES = ${PARTICIPANTES_JS};
 EOF
 
 exec nginx -g 'daemon off;'
