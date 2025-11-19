@@ -1,2 +1,2 @@
-window.SORTUDO = "Fulano";
-window.PARTICIPANTES = ["Fulano", "Beltrano", "Ciclano"];
+window.SORTUDO = "Herico";
+window.PARTICIPANTES = ["Marise", "Helcio", "Fernanda", "Flavinho", "Felipe", "Flavinha", "Herico", "Gabriela", "Henzo", "Tia Lila", "Solon", "Maria Helena", "Gabriel", "Maria Lucia", "Marcelo", "Fernando Neto", "Lucas", "Gabi de Lucas"];
