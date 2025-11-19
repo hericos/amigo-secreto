@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Amigo Secreto – Sorteio do Sortudo</title>
+  <title>Amigo Secreto – Sorteio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -10,22 +10,11 @@
     <h1>Amigo Secreto 🎁</h1>
 
     <p class="subtitle">
-      Simulação de sorteio de amigo secreto.<br />
-      O resultado SEMPRE será o nome configurado na variável de ambiente <code>sortudo</code>.
+      Lista de participantes carregada automaticamente via variáveis de ambiente.
     </p>
 
     <div class="card">
       <h2>Participantes</h2>
-      <form id="form-participantes">
-        <input
-          type="text"
-          id="nome"
-          placeholder="Nome do participante"
-          autocomplete="off"
-        />
-        <button type="submit">Adicionar</button>
-      </form>
-
       <ul id="lista-participantes"></ul>
     </div>
 
@@ -36,11 +25,10 @@
     </div>
 
     <footer>
-      <small>Configuração atual do sortudo: <span id="sortudo-atual"></span></small>
+      <small>Sortudo configurado: <span id="sortudo-atual"></span></small>
     </footer>
   </div>
 
-  <!-- Arquivo gerado a partir da env "sortudo" -->
   <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
